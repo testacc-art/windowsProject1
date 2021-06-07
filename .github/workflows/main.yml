@@ -1,17 +1,9 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: BuildWithAppInstallerFile
 
 # Controls when the action will run. 
-on:  
-  repository_dispatch:
-    types: [my-event]
-
-  # Triggers the workflow on push event but only for the main branch
-  
-
-# Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+on: [push]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -43,10 +35,10 @@ jobs:
           
           
       # Upload the build artifacts: https://github.com/marketplace/actions/upload-artifact
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: 'Build Debug mode'
-          path:  'D:\a\windowsProject1\WindowsProject1\WindowsProject1'
+#       - name: Upload build artifacts
+#         uses: actions/upload-artifact@v1
+#         with:
+#           name: 'Build Debug mode'
+#           path:  'D:\a\windowsProject1\WindowsProject1\WindowsProject1'
           
 
